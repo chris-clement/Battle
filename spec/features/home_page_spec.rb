@@ -18,13 +18,5 @@ feature 'fill in player name' do
   scenario 'home page has a Player 2 box' do
     expect(page.has_field?('name2')).to be_truthy
   end
-
-  scenario 'names entered should appear on screen after submission' do
-    fill_in(:name1, with: 'Kim')
-    fill_in(:name2, with: 'Chris')
-    click_button('Submit')
-    save_and_open_page
-    expect(page).to have_content 'Kim vs Chris'
-  end
 end
 
