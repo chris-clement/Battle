@@ -20,9 +20,10 @@ feature 'fill in player name' do
   end
 
   scenario 'names entered should appear on screen after submission' do
-    fill_in('name1', with: 'Kim')
-    fill_in('name2', with: 'Chris')
+    fill_in(:name1, with: 'Kim')
+    fill_in(:name2, with: 'Chris')
     click_button('Submit')
+    save_and_open_page
     expect(page).to have_content 'Kim vs Chris'
   end
 end
