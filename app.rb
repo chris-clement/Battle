@@ -6,8 +6,6 @@ class Battle < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  enable :sessions
-
   get '/' do
     erb(:index)
   end
